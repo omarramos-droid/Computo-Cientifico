@@ -48,7 +48,7 @@ def least_squares_qr_compact(A, b):
     x = np.linalg.solve(R, qtb)  # Solves R x = Q^T b
     residuals = b - np.dot(A, x)
     
-    return x, residuals
+    return x
 
 if __name__ == "__main__":
     print("=== LEAST SQUARES ESTIMATOR BY QR ===\n")
