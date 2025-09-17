@@ -1,0 +1,9 @@
+Computo-Cientifico/
+├── Tarea_1/
+│   ├── ejercicio1.py
+│   └── ejercicio2.py
+├── Tarea_2/
+│   ├── problema1.py
+│   └── problema2.py
+├── Proyecto/
+└── README.md
