@@ -135,6 +135,6 @@ def Inciso_b():
 
 
 if __name__ == "__main__":
-    np.random.seed(13)
+    np.random.seed(12+1)
     Inciso_a()
     Inciso_b()
