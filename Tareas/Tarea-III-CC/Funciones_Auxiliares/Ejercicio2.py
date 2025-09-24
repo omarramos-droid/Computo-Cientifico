@@ -22,8 +22,6 @@ def least_squares_qr(A, b):
     Returns:
     --------
     beta :  Least squares estimator of β and numy array
-    residuals : numpy array of shape (m,)
-        Residual vector ε = y - Xβ
     """
     # Step 1: QR decomposition
     Q, R = modified_gram_schmidt(A)
@@ -35,10 +33,8 @@ def least_squares_qr(A, b):
     # Step 3: Solve R x = Q^T b using backward substitution
     beta = backward_substitution(R, qtb)
     
-    # Step 4: Compute residuals
-    residuals = b - np.dot(A, beta)
-    
-    return beta, residuals
+
+    return beta
 def least_squares_qr_compact(A, b):
     """
     Using numpy functions
