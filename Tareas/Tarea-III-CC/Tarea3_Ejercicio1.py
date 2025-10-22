@@ -5,7 +5,7 @@ import os
 import scipy.linalg
 import time
 
-# Agregar la ruta de funciones auxiliares al path de Python
+# Ruta de funciones auxiliares al path de Python
 sys.path.append(os.path.join(os.path.dirname(__file__), 'Funciones_Auxiliares'))
 from Tarea_1_ex5and6 import cholesky_factorization
 from Ejercicio1 import modified_gram_schmidt
