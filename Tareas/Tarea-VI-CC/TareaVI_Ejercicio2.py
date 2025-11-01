@@ -86,8 +86,9 @@ def metropolis_hastings_normal(r, n, num_samples=10000, sigma=0.15, seed=123):
             acceptance_count += 1
             
         samples.append(p_current)
-
-    return np.array(samples), acceptance_count / num_samples
+        
+    acceptance_rate = acceptance_count / num_samples
+    return np.array(samples), acceptance_rate
 
 
 
@@ -112,6 +113,7 @@ def plot_cadena_con_posterior(r, n, label, num_samples=10_000, warmup=1_000, pro
     plt.plot(samples, 'b-', alpha=0.7, linewidth=0.8)
     plt.axvline(x=warmup, color='red', linestyle='--', label=f'Fin de warmup ({warmup} iter)')
     plt.xlabel('Iteración')
+    #plt.ylim(0,0.5)
     plt.ylabel('p')
     plt.title(f'Cadena MCMC - {label} (Propuesta: {propuesta})')
     plt.legend()
