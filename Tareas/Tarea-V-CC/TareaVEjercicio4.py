@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 from scipy.special import gammaln
 
 # 1. Densidades y utilidades
-
+#Los valores en las funciones son solo de referencia, en la implementacion final
+# se adaptan
 def gamma_log_density(x, alpha, beta):
     """Log-densidad de Gamma(alpha, beta) en punto x, debe ser mayor a 0"""
     if x <= 0:
